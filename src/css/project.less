@@ -4,11 +4,26 @@
   position: relative;
   background: black;
   color: white;
+  @media @mobile {
+    z-index: 9999;
+  }
   .display-flex;
   .flex-wrap(wrap);
+  .text-container {
+    @media @mobile {
+      z-index: 9999;
+    }
+  }
   .text-box {
     width: 40%;
     padding: 600px 20px 200px 20px;
+    @media @mobile {
+      width: 100%;
+      padding: 20px;
+      margin-top: 600px;
+      margin-bottom: 200px;
+      z-index: 9999;
+    }
     &.image {
       font-size: 40px;
       text-align: center;
@@ -28,8 +43,15 @@
   right: 20px;
   left: 40%;
   max-width: 100%;
+  @media @mobile {
+    left: 20px;
+    z-index: 0;
+  }
   #scrolly-image {
     max-width: 100%;
+    @media @mobile {
+      z-index: 0;
+    }
   }
 }
 
@@ -39,6 +61,9 @@
   bottom: 0;
   right: 20px;
   left: 40%;
+  @media @mobile {
+    left: 20px;
+  }
   img {
     position: absolute;
     top: 0; bottom: 0;
