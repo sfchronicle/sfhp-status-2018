@@ -31,6 +31,30 @@
 
   <p>Weariness: The decades-old problem lends itself to a perception that it has no end in sight, and the exploding opioid epidemic, which has thrust more addicts onto the streets shooting up in public, only adds to the sense of futility.</p>
 
+    <div class="outer outer-slider">
+      <div class="hed hed-slider">Street cleaning</div>
+      <div class="chatter chatter-slider">
+        A row of tents and shelters along 13th Street is clear now after Mayor Mark Farrell ordered it to be cleaned up permanently.</div>
+      <div class="chatter chatter-slider directions">
+        <i class="fa fa-hand-pointer-o fa-rotate-90" aria-hidden="true"></i> Drag the slider to see the street before and after.</div>
+      <div style="text-align: center; width: 100%; margin: 0 auto;">
+        <image-slider style="width: 100%; max-width: 730px; overflow: hidden;">
+          <img id="slider-1" srcset="
+            https://s.hdnux.com/photos/74/07/37/15759342/3/1000x0.jpg 1000w,
+            https://s.hdnux.com/photos/74/07/37/15759342/3/800x0.jpg 800w"
+            src="https://s.hdnux.com/photos/74/07/37/15759342/3/1000x0.jpg"
+            alt="Homeless people on a sidewalk on Division St.">
+          <img id="slider-2" srcset="
+            https://s.hdnux.com/photos/74/07/37/15759341/3/1000x0.jpg 1000w,
+            https://s.hdnux.com/photos/74/07/37/15759341/3/800x0.jpg 800w"
+            src="https://s.hdnux.com/photos/74/07/37/15759341/3/1000x0.jpg"
+            alt="The empty sidewalk on Division after street cleaning">
+        </image-slider>
+      </div>
+      <p class="caption"><span class="byline">Photos: Lea Suzuki, The Chronicle</span></p>
+
+    </div>
+
   <p>Tents: The proliferation of tents all over the city, in places where before there were mostly just blankets and tarp lean-tos, has been perhaps the biggest driver. The Occupy protest movement that flared in 2011 and died out in 2012 infused hundreds of tents onto the streets, and kindhearted residents followed by raising donations to buy even more.</p>
 
   <p>Gentrification: As the city’s tech-driven economy exploded, traditional homeless hangouts in places like central SoMa or around the Transbay Terminal were revitalized. Unable to blend in so easily, the homeless migrated elsewhere, causing fresh alarm to those unused to seeing camps.</p>
@@ -38,26 +62,28 @@
   <p>Panhandlers: As many as 50 percent of them, by some estimates, are formerly homeless people who now live inside but are so dysfunctional they revert to the one moneymaking technique they’ve always known. They look homeless, but they’re not.</p>
 
   <div id="stick-here"></div>
-  <div class="scrolly-container">
+<div class="scrolly-container">
 
-    <div class="text-container">
-      <% json.status0628.scrolly.forEach(function(d,dIDX){ %>
-        <div class="text-box <%=d.Class%>" id="text<%=dIDX%>"><%=d.Text%></div>
-      <% }); %>
-    </div>
-
-    <div class="scrolly-image" id="stick-me"><img id="scrolly-image" src="https://s.hdnux.com/photos/74/14/25/15753564/5/920x1240.jpg"></img></div>
-
-
+  <div class="text-container">
+    <% json.status0628.scrolly.forEach(function(d,dIDX){ %>
+      <div class="text-box <%=d.Class%>" id="text<%=dIDX%>"><%=d.Text%></div>
+    <% }); %>
   </div>
-  <div id="stop-stick"></div>
+
+  <div class="scrolly-image" id="stick-me"><img id="scrolly-image" src="https://s.hdnux.com/photos/74/14/25/15753564/5/920x1240.jpg"></img></div>
+
+
+</div>
+<div id="stop-stick"></div>
 
 
 </main>
 
-  <script>
-    var statusData = <%=JSON.stringify(json.status0628.scrolly) %>
-  </script>
+<script>
+  var statusData = <%=JSON.stringify(json.status0628.scrolly) %>
+</script>
+
+
 
   <script src="app.js" async></script>
 	<%= t.include("partials/_footer.html") %>
