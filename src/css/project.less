@@ -1,13 +1,14 @@
 .scrolly-container {
-  max-width: 1200px;
+  // max-width: 1200px;
   margin: auto;
   position: relative;
+  background: black;
+  color: white;
   .display-flex;
   .flex-wrap(wrap);
   .text-box {
-    width: 33%;
-    padding: 400px 20px;
-    // background: lighten(@light-gray,10%);
+    width: 40%;
+    padding: 600px 20px 200px 20px;
     &.image {
       font-size: 40px;
       text-align: center;
@@ -23,9 +24,9 @@
 
 .scrolly-image {
   position: absolute;
-  top: 0;
-  right: 0;
-  left: 33%;
+  top: 30px; bottom: 0;
+  right: 20px;
+  left: 40%;
   max-width: 100%;
   #scrolly-image {
     max-width: 100%;
@@ -36,8 +37,8 @@
   position: fixed;
   top: 37px;
   bottom: 0;
-  right: 0;
-  left: 33%;
+  right: 20px;
+  left: 40%;
   img {
     position: absolute;
     top: 0; bottom: 0;

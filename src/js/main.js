@@ -23,6 +23,18 @@ statusData.forEach(function(s,sIDX){
 
 console.log(urls);
 
+// swap image
+function swap(url) {
+  scrollImg.fadeOut(fadeTime, function() {
+    //update the src
+    scrollImg.attr("src", url);
+    //fade in once it's loaded
+    scrollImg.one("load", function() {
+      scrollImg.fadeIn(fadeTime);
+    });
+  })
+};
+
 function activate(){
   let scrollPos = window.scrollY;
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -45,20 +57,7 @@ function activate(){
     if (scrollPos > boxTop && scrollPos <= boxBottom && lastID != idx){
       lastID = idx;
       console.log(lastID);
-
-      // swap image
-      var swap = function() {
-        scrollImg.fadeOut(fadeTime, function() {
-          //update the src
-          scrollImg.attr("src", urls[lastID]);
-          //fade in once it's loaded
-          scrollImg.one("load", function() {
-            scrollImg.fadeIn(fadeTime);
-          });
-        })
-      };
-      swap();
-
+      swap(urls[lastID]);
     }
   }
 
