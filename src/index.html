@@ -62,9 +62,26 @@
   <p>Panhandlers: As many as 50 percent of them, by some estimates, are formerly homeless people who now live inside but are so dysfunctional they revert to the one moneymaking technique they’ve always known. They look homeless, but they’re not.</p>
 
   <div id="stick-here"></div>
+<div class="scrolly-container">
+
+  <div class="text-container">
+    <% json.status0628.scrolly.forEach(function(d,dIDX){ %>
+      <div class="text-box <%=d.Class%>" id="text<%=dIDX%>"><%=d.Text%></div>
+    <% }); %>
+  </div>
+
+  <div class="scrolly-image" id="stick-me"><img id="scrolly-image" src="https://s.hdnux.com/photos/74/14/25/15753564/5/920x1240.jpg"></img></div>
+
+
+</div>
+<div id="stop-stick"></div>
 
 
 </main>
+
+<script>
+  var statusData = <%=JSON.stringify(json.status0628.scrolly) %>
+</script>
 
 
 
