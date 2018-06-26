@@ -1,5 +1,6 @@
 require("./lib/social"); //Do not delete
 var debounce = require("./lib/debounce");
+require("image-slider");
 
 console.log(statusData);
 let lastID = 0;
