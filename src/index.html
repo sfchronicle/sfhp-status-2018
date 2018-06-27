@@ -23,13 +23,12 @@
 
   <p>It may not seem like it, but there are fewer homeless people on the streets of San Francisco now than there were in 2004, when the city launched a series of long, intensive and only partially successful efforts to put every street person under a roof.</p>
 
-  <p>Over the past 14 years, the city has housed 26,000 homeless people, many of them the chronically troubled type who had been on the streets more than a year. San Francisco has doubled the money it spends on homelessness — to more than $300 million — launched innovations including the nationally copied Navigation Center counseling-intensive shelter system, and created the city’s first unified Department of Homelessness and Supportive Housing.</p>
-
   <%= t.include("partials/_infobox.html") %>
+
+  <p>Over the past 14 years, the city has housed 26,000 homeless people, many of them the chronically troubled type who had been on the streets more than a year. San Francisco has doubled the money it spends on homelessness — to more than $300 million — launched innovations including the nationally copied Navigation Center counseling-intensive shelter system, and created the city’s first unified Department of Homelessness and Supportive Housing.</p>
 
   <p>In that time, the overall homeless population, according to one-night counts done every two years, has fallen from 8,640 in 2004 to 7,499 in 2017. So why is homelessness so often named by residents as the city’s No.1 problem and regarded as being worse than ever? Here are a few of the reasons:</p>
 
-  <p>Weariness: The decades-old problem lends itself to a perception that it has no end in sight, and the exploding opioid epidemic, which has thrust more addicts onto the streets shooting up in public, only adds to the sense of futility.</p>
 
     <div class="outer outer-slider">
       <div class="hed hed-slider">Street cleaning</div>
@@ -55,11 +54,13 @@
 
     </div>
 
-  <p>Tents: The proliferation of tents all over the city, in places where before there were mostly just blankets and tarp lean-tos, has been perhaps the biggest driver. The Occupy protest movement that flared in 2011 and died out in 2012 infused hundreds of tents onto the streets, and kindhearted residents followed by raising donations to buy even more.</p>
+  <p><span class="bold-class">Weariness:</span>The decades-old problem lends itself to a perception that it has no end in sight, and the exploding opioid epidemic, which has thrust more addicts onto the streets shooting up in public, only adds to the sense of futility.</p>
 
-  <p>Gentrification: As the city’s tech-driven economy exploded, traditional homeless hangouts in places like central SoMa or around the Transbay Terminal were revitalized. Unable to blend in so easily, the homeless migrated elsewhere, causing fresh alarm to those unused to seeing camps.</p>
+  <p><span class="bold-class">Tents:</span>The proliferation of tents all over the city, in places where before there were mostly just blankets and tarp lean-tos, has been perhaps the biggest driver. The Occupy protest movement that flared in 2011 and died out in 2012 infused hundreds of tents onto the streets, and kindhearted residents followed by raising donations to buy even more.</p>
 
-  <p>Panhandlers: As many as 50 percent of them, by some estimates, are formerly homeless people who now live inside but are so dysfunctional they revert to the one moneymaking technique they’ve always known. They look homeless, but they’re not.</p>
+  <p><span class="bold-class">Gentrification:</span>As the city’s tech-driven economy exploded, traditional homeless hangouts in places like central SoMa or around the Transbay Terminal were revitalized. Unable to blend in so easily, the homeless migrated elsewhere, causing fresh alarm to those unused to seeing camps.</p>
+
+  <p><span class="bold-class">Panhandlers:</span>As many as 50 percent of them, by some estimates, are formerly homeless people who now live inside but are so dysfunctional they revert to the one moneymaking technique they’ve always known. They look homeless, but they’re not.</p>
 
   <div class="scroll-hed">See progress and challenges in five areas related to homelessness: shelters, supportive housing, policing, mental health and drugs</div>
   <div id="stick-here"></div>
@@ -67,11 +68,18 @@
 
     <div class="text-container">
       <% json.status0628.scrolly.forEach(function(d,dIDX){ %>
-        <div class="text-box <%=d.Class%>" id="text<%=dIDX%>"><%=d.Text%></div>
+        <% if (d.Text2) { %>
+          <div class="text-box <%=d.Class%>" id="text<%=dIDX%>">
+            <%=d.Text%>
+            <br><%=d.Text2%>
+          </div>
+        <% } else { %>
+          <div class="text-box <%=d.Class%>" id="text<%=dIDX%>"><%=d.Text%></div>
+        <% } %>
       <% }); %>
     </div>
 
-    <div class="scrolly-image" id="stick-me"><img id="scrolly-image" src="https://s.hdnux.com/photos/74/14/25/15753548/5/1000x0.jpg"></img></div>
+    <div class="scrolly-image" id="stick-me"><img id="scrolly-image" src="./assets/graphics/COMPARISON_GR.jpg"></img></div>
 
 
   </div>

@@ -14,20 +14,19 @@ window.onscroll = debounce(function() {activate()},0);
 let urls = [];
 statusData.forEach(function(s,sIDX){
   if (s.Class === "graphic"){
-    if (s.Image){
-      urls.push(s.Image);
+    if (screen.width <= 480){
+      urls.push("./assets/graphics/"+s.MobileImage);
     } else {
-      urls.push("./assets/06.jpg");
+      urls.push("./assets/graphics/"+s.Image);
     }
-    // THIS IS A HACK WHILE I WAIT FOR GRAPHICS
-    // urls.push("./assets/06.jpg");
-    // urls.push(s.Image);
   } else {
-    urls.push("https://s.hdnux.com/photos/74/14/25/"+s.Image+"/5/1000x0.jpg");
+    if (screen.width <= 480){
+      urls.push("https://s.hdnux.com/photos/74/14/25/"+s.Image+"/5/600x0.jpg");
+    } else {
+      urls.push("https://s.hdnux.com/photos/74/14/25/"+s.Image+"/5/1000x0.jpg");
+    }
   }
 });
-
-console.log(urls);
 
 // swap image
 function swap(url) {
