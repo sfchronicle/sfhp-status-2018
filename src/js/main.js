@@ -14,8 +14,13 @@ window.onscroll = debounce(function() {activate()},0);
 let urls = [];
 statusData.forEach(function(s,sIDX){
   if (s.Class === "graphic"){
+    if (s.Image){
+      urls.push(s.Image);
+    } else {
+      urls.push("./assets/06.jpg");
+    }
     // THIS IS A HACK WHILE I WAIT FOR GRAPHICS
-    urls.push("./assets/06.jpg");
+    // urls.push("./assets/06.jpg");
     // urls.push(s.Image);
   } else {
     urls.push("https://s.hdnux.com/photos/74/14/25/"+s.Image+"/5/1000x0.jpg");

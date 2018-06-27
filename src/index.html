@@ -10,7 +10,7 @@
 					<p class="caption"><span class="year">April 25, 2018 </span> Emergency responders transport a homeless man to an ambulance after he was stabbed on Division Street.<span class="byline"> Photo: Lea Suzuki, The Chronicle</span></p>
 			</div>
 
-			<h1 class="title long">The situation on the streets</h1>
+			<h1 class="title">The situation on the streets</h1>
 			<div class="whatif-box">
 				How many homeless in San Francisco? Not as many as it might seem
 			</div>
@@ -61,20 +61,21 @@
 
   <p>Panhandlers: As many as 50 percent of them, by some estimates, are formerly homeless people who now live inside but are so dysfunctional they revert to the one moneymaking technique they’ve always known. They look homeless, but they’re not.</p>
 
+  <div class="scroll-hed">See progress and challenges in five areas related to homelessness: shelters, supportive housing, policing, mental health and drugs</div>
   <div id="stick-here"></div>
-<div class="scrolly-container">
+  <div class="scrolly-container">
 
-  <div class="text-container">
-    <% json.status0628.scrolly.forEach(function(d,dIDX){ %>
-      <div class="text-box <%=d.Class%>" id="text<%=dIDX%>"><%=d.Text%></div>
-    <% }); %>
+    <div class="text-container">
+      <% json.status0628.scrolly.forEach(function(d,dIDX){ %>
+        <div class="text-box <%=d.Class%>" id="text<%=dIDX%>"><%=d.Text%></div>
+      <% }); %>
+    </div>
+
+    <div class="scrolly-image" id="stick-me"><img id="scrolly-image" src="https://s.hdnux.com/photos/74/14/25/15753548/5/1000x0.jpg"></img></div>
+
+
   </div>
-
-  <div class="scrolly-image" id="stick-me"><img id="scrolly-image" src="https://s.hdnux.com/photos/74/14/25/15753564/5/920x1240.jpg"></img></div>
-
-
-</div>
-<div id="stop-stick"></div>
+  <div id="stop-stick"></div>
 
 <div class="credits">
   <div class="entry">
@@ -98,7 +99,7 @@
   </div>
 </div>
 
-<script src="//projects.sfchronicle.com/shared/js/responsive-frame.js"></script><iframe is="responsive-iframe" interval="0" src="//projects.sfchronicle.com/test-proj/homeless-recirc/dontMiss.html?ids=https%3A%2F%2Fwww.sfchronicle.com%2Fnews%2Farticle%2FNeighbors-disgusted-over-despair-on-block-hit-13015964.php+https%3A%2F%2Fprojects.sfchronicle.com%2Fsf-homeless%2Fdivision-street-2018-update%2F+https%3A%2F%2Fwww.sfchronicle.com%2Fnews%2Farticle%2FSF-Homeless-Project-What-has-been-done-and-13017681.php&head=Related%20coverage" frameborder="0"></iframe>
+<!-- <script src="//projects.sfchronicle.com/shared/js/responsive-frame.js"></script><iframe is="responsive-iframe" interval="0" src="//projects.sfchronicle.com/test-proj/homeless-recirc/dontMiss.html?ids=https%3A%2F%2Fwww.sfchronicle.com%2Fnews%2Farticle%2FNeighbors-disgusted-over-despair-on-block-hit-13015964.php+https%3A%2F%2Fprojects.sfchronicle.com%2Fsf-homeless%2Fdivision-street-2018-update%2F+https%3A%2F%2Fwww.sfchronicle.com%2Fnews%2Farticle%2FSF-Homeless-Project-What-has-been-done-and-13017681.php&head=Related%20coverage" frameborder="0"></iframe> -->
 
 </main>
 
