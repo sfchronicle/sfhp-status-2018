@@ -28,8 +28,6 @@ statusData.forEach(function(s,sIDX){
   }
 });
 
-console.log(urls);
-
 // swap image
 function swap(url) {
   scrollImg.fadeOut(fadeTime, function() {
