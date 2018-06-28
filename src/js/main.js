@@ -2,7 +2,6 @@ require("./lib/social"); //Do not delete
 var debounce = require("./lib/debounce");
 require("image-slider");
 
-console.log(statusData);
 let lastID = 0;
 
 var fadeTime = 500;
@@ -14,7 +13,7 @@ window.onscroll = debounce(function() {activate()},0);
 if (screen.width <= 480){
   scrollImg.attr("src","./assets/graphics/"+statusData[0].MobileImage);
   var scrollOffset = 600;
-  var bottomOffset = 700;
+  var bottomOffset = 200;
 } else {
   var scrollOffset = 0;
   var bottomOffset = 450;
