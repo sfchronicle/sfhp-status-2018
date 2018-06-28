@@ -11,6 +11,15 @@ var scrollImg = $("#scrolly-image");
 
 window.onscroll = debounce(function() {activate()},0);
 
+if (screen.width <= 480){
+  scrollImg.attr("src","./assets/graphics/"+statusData[0].MobileImage);
+  var scrollOffset = 600;
+  var bottomOffset = 700;
+} else {
+  var scrollOffset = 0;
+  var bottomOffset = 450;
+}
+
 let urls = [];
 statusData.forEach(function(s,sIDX){
   if (s.Class === "graphic"){
@@ -46,7 +55,7 @@ function activate(){
 
   let stickme = document.getElementById("stick-me");
   let stickmeTop = document.getElementById("stick-here").getBoundingClientRect().top+scrollTop-37;
-  let stickmeBottom = document.getElementById("stop-stick").getBoundingClientRect().top+scrollTop-450;
+  let stickmeBottom = document.getElementById("stop-stick").getBoundingClientRect().top+scrollTop-bottomOffset;
 
   // when should the sidebar image be fixed
   if (scrollPos > stickmeTop && scrollPos <= stickmeBottom) {
@@ -57,8 +66,8 @@ function activate(){
 
   // which sidebar image should be shown
   for (let idx=0; idx<statusData.length; idx++){
-    let boxTop = document.getElementById("text"+idx).getBoundingClientRect().top+scrollTop;
-    let boxBottom = document.getElementById("text"+idx).getBoundingClientRect().bottom+scrollTop;
+    let boxTop = document.getElementById("text"+idx).getBoundingClientRect().top+scrollTop-scrollOffset;
+    let boxBottom = document.getElementById("text"+idx).getBoundingClientRect().bottom+scrollTop-scrollOffset;
     if (scrollPos > boxTop && scrollPos <= boxBottom && lastID != idx){
       lastID = idx;
       console.log(lastID);
